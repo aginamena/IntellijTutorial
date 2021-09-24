@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.*;
 public class AddressBook {
     private ArrayList<BuddyInfo> persons;
@@ -8,13 +9,11 @@ public class AddressBook {
         persons.add(newPerson);
     }
     public void removeBuddy(BuddyInfo removeBuddy){
-        for(BuddyInfo person : persons){
-            if(person.getName().equals(removeBuddy.getName())
-            && person.getAddress().equals(removeBuddy.getAddress())
-            && person.getPhoneNumber().equals(removeBuddy.getPhoneNumber())){
-                persons.remove(person);
-                break;
-            }
+        persons.remove(removeBuddy);
+    }
+    public void printNames(){
+        for(BuddyInfo buddy : persons){
+            System.out.println(buddy.getName());
         }
     }
     public static void main(String[] args){
@@ -24,9 +23,5 @@ public class AddressBook {
         BuddyInfo buddy3 = new BuddyInfo("Tom3", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.addBuddy(buddy2);
-        addressBook.addBuddy(buddy3);
-        addressBook.removeBuddy(buddy3);
-
     }
 }
