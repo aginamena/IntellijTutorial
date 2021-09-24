@@ -24,5 +24,8 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.addBuddy(buddy2);
+        //this is a test
+        //to test the new brach created,
+        //called testbranch
     }
 }
