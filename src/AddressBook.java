@@ -23,5 +23,6 @@ public class AddressBook {
         BuddyInfo buddy3 = new BuddyInfo("Tom3", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
+        addressBook.addBuddy(buddy2);
     }
 }
